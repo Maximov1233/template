@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    .header {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5rem;
+        .logo {
+            h2 {
+            font-weight: 700;
+            font-size: 3rem;
+            color: #858688;
+            span {
+                color: #5b4295;
+            }
+            }
+        }
+        .navbar {
+            width: 100px;
+            text-align: left;
+            .nav-link {
+                font-size: 1.8rem;
+                color: #454545;
+                margin-right: 2rem;
+                
+                
+            }
+        }
+        .authorization {
+            display: flex;
+            .login-wrap {
+                ::before {
+                    content: '';
+                    background-image: url(../img/login.svg);
+                    background-size: 50px 50px;
+                    background: #000;
+                }
+                color: #000;
+                .login-button {
+                    font-weight: 700;
+                    border: none;
+                    background: transparent;
+                    color: #454545;
+                    font-size: 2rem;
+                    width: 94px;
+                    height: 40px;
+                    text-align: center;
+                    margin-right: 1rem;
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        margin-right: 0.8rem;
+                        width: 17px;
+                        height: 17px;
+                        fill: #582c7e;
+                    }
+                }
+            }
+            .signup-button {
+                font-weight: 700;
+                border: none;
+                color: #fff;
+                font-size: 1.6rem;
+                width: 94px;
+                height: 40px;
+                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(142, 117, 222, 0.15);
+                border-radius: 20px;
+                background-color: #582c7e;
+                text-align: center;
+            }
+        }
+    }
+}
