@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'englisht';
+    src: url(../fonts/englisht.ttf),
+    url(../fonts/englisht.ttf) format(ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,32 +12,55 @@
 html {
     font-size: 10px;
 }
+.logo {
+    position: relative;
+}    
 body {
     font-family: 'Titillium Web', sans-serif;
+    height: 1000rem;
     .header {
         text-align: center;
         display: flex;
         justify-content: space-around;
         margin-top: 5rem;
-        .logo {
-            h2 {
-            font-weight: 700;
-            font-size: 3rem;
-            color: #858688;
-            span {
+        margin-bottom: 10rem;
+        .logo_language {
+            text-align: left;
+            position: relative;
+            width: 30rem;
+            .logo-text {
+                h2 {
+                font-weight: 700;
+                font-size: 3rem;
+                color: #858688;
+                }
+                span {
                 color: #5b4295;
+                }
             }
+            .language_choose {
+                position: absolute;
+                top: 4.1rem;
+                left: 0;
+                font-size: 1.4rem;
+                color: #959595;
+                span {
+                    cursor: pointer;
+                }
+                .active {
+                    font-weight: 700;
+                }
             }
+
         }
         .navbar {
             width: 100px;
             text-align: left;
+            position: relative;
             .nav-link {
                 font-size: 1.8rem;
                 color: #454545;
                 margin-right: 2rem;
-                
-                
             }
         }
         .authorization {
@@ -75,6 +104,205 @@ body {
                 border-radius: 20px;
                 background-color: #582c7e;
                 text-align: center;
+            }
+        }
+        
+    }
+    .main {
+        .ios-button {
+            border: none;
+            width: 46px;
+            height: 46px;
+            background-color: #5f2966;
+            opacity: 0.9;
+            border-radius: 50%;
+            margin-right: 2rem;
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+                fill: #fff;
+            }
+        }
+        .android-button {
+            border-radius: 50%;
+            border: none;
+            width: 46px;
+            height: 46px;
+            background-color: #4a1c50;
+            opacity: 0.79;
+            text-align: center;
+            svg {
+                width: 20px;
+                height: 22px;
+            }
+        }
+        .welcome {
+            text-align: center;
+            margin-bottom: 10rem;
+            h1 {
+                color: #454545;
+                opacity: 0.84;
+                font-size: 6rem;
+                font-weight: 600;
+            }
+            p {
+                font-size: 3.6rem;
+                color: #464646;
+                span {
+                    color: #fc2028;
+                }
+            }
+            .download {
+                margin-top: 8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &-button {
+                    color: #fff;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    letter-spacing: 0.18px;
+                    border: none;
+                    width: 246px;
+                    height: 56px;
+                    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(100, 115, 151, 0.15), 0 0 7px rgba(95, 47, 106, 0.25);
+                    border-radius: 28px;
+                    background-color: #5f2966;
+                    margin-right: 2rem;
+                }
+                
+                
+            }  
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 10rem;
+            .feature {
+                display: flex;
+                justify-content: space-between;
+                &:nth-child(2) {
+                    align-items: baseline;
+                }
+                &__logo {
+                    text-align: center;
+                }
+                &__text {
+                    text-align: left;
+                    h4 {
+                        font-size: 3rem;
+                    }
+                    p {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        .security {
+            text-align: center;
+            h1 {
+                font-size: 6rem;
+                color: #535353;
+            }
+            p {
+                font-size: 2.4rem;
+                color: #959393;
+                font-weight: 400;
+                span {
+                    color: #f65151;
+                }
+            }
+            &-button {
+                margin-top: 2rem;
+                width: 334px;
+                height: 62px;
+                color: #676767;
+                border-radius: 31px;
+                border: 1px solid #b9b9b9;
+                background-color: #ffffff;
+                font-size: 1.6rem;
+            }
+        }
+        .testimonials {
+            margin-top: 2rem;
+            .news {
+                height: 10rem;
+                display: flex;
+                background: url(../img/Layer_16.png) no-repeat center;
+                svg {
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
+            .slider {
+                position: relative;
+                margin-top: 6rem;
+                display: flex;
+                justify-content: center;
+                &-count {
+                    margin-right: 2rem;
+                    &__circle {
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        background: #101010;
+                        border-radius: 50%;
+                        margin-bottom: 1rem;
+                        opacity: 0.3;
+                        cursor: pointer;
+                    }
+                }
+                &-window {
+                    height: 18rem;
+                    overflow: hidden;
+                    .slider-block__wrap {
+                        .slider-block {
+                            width: 60rem;
+                            font-style: italic;
+                            &__text {
+                                font-size: 2.4rem;
+                                color: #101010;
+                            }
+                            &__author {
+                                font-size: 1.6rem;
+                                color: #727272;
+                            }
+                        }
+                    }
+                }         
+            }
+            .download {
+                width: 100rem;
+                text-align: right;
+                position: absolute;
+                right: 30rem;
+                min-height: 100%;
+                background: url(../img/download-bg.png) no-repeat right top;
+                &-text {
+                    margin-top: 33%;
+                    width: 45%;
+                    min-height: 100%;
+                    margin-left: 7%;
+                    h3 {
+                        font-size: 3.6rem;
+                        color: #535353;
+                    }
+                    p {
+                        font-size: 1.6rem;
+                        color: #959393;
+                    }
+                }
+                &-links {
+                    max-width: 68%;
+                    display: flex;
+                    justify-content: center;
+                    button {
+                        margin-right: 20rem;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
             }
         }
     }

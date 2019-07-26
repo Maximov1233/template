@@ -7,13 +7,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <h2>neutron<span>Mail</span></h2>
+
+        <div class="logo_language">
+            <div class="logo-text">
+                <h2>neutron<span>Mail</span></h2>
+            </div>
+            <div class="language_choose">
+                <p><span class="english language active">English</span> / <span class="french language">French</span> / <span class="italian language">Italian</span> / <span class="polish language">Polish</span></p>
+            </div>
         </div>
+        
 
         <nav class="navbar navbar-expand">
             <ul class="navbar-nav">
@@ -56,9 +63,173 @@
                 <button class="signup-button">Sign up</button>
             </div>
         </div>
+
+        
                     
     </header>
-    <main>
+    <main class="main">
+
+        <section class="welcome">
+            <div class="container">
+                <div class="welcome-text">
+                    <h1>Secure Email Communication</h1>
+                    <p>Based in <span>Somewhere</span></p>
+                </div>
+                <div class="download">
+                    <button class="download-button">Create account</button>
+                    <button class="ios-button"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 475.088 475.088" style="enable-background:new 0 0 475.088 475.088;"
+                        xml:space="preserve">
+                           <path d="M391.29,310.91c-13.135-18.842-19.698-40.07-19.698-63.666c0-21.508,6.194-41.213,18.556-59.102
+                               c6.662-9.707,17.514-20.934,32.551-33.689c-9.896-12.178-19.793-21.695-29.697-28.549c-17.891-12.37-38.164-18.555-60.812-18.555
+                               c-13.511,0-29.979,3.234-49.389,9.71c-18.654,6.471-32.265,9.71-40.826,9.71c-6.475,0-19.606-2.853-39.401-8.566
+                               c-19.985-5.711-36.831-8.564-50.535-8.564c-32.738,0-59.766,13.706-81.083,41.112c-21.508,27.79-32.264,63.382-32.264,106.78
+                               c0,46.062,13.993,93.928,41.971,143.607c28.358,49.297,57.005,73.949,85.936,73.949c9.707,0,22.27-3.237,37.685-9.708
+                               c15.42-6.276,28.933-9.421,40.545-9.421c12.368,0,26.741,3.045,43.109,9.133c17.319,6.085,30.646,9.131,39.971,9.131
+                               c24.362,0,48.824-18.654,73.374-55.959c15.985-23.791,27.692-47.582,35.115-71.376C419.458,341.744,404.424,329.753,391.29,310.91
+                               z"/>
+                           <path d="M294.213,90.219c11.994-11.991,20.844-25.126,26.556-39.399c5.517-14.275,8.271-27.22,8.271-38.832
+                               c0-0.759-0.041-1.712-0.144-2.855c-0.086-1.142-0.137-2.091-0.137-2.853c-0.192-0.572-0.428-1.619-0.712-3.14
+                               c-0.284-1.521-0.521-2.568-0.716-3.14c-33.499,7.808-57.29,21.892-71.376,42.259c-14.271,20.557-21.698,45.013-22.27,73.373
+                               c12.753-1.143,22.646-2.758,29.692-4.853C273.663,107.352,283.929,100.497,294.213,90.219z"/>
+                   </svg>
+                </button>
+                    <button class="android-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="22" viewBox="0 0 20 22"><image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAACDElEQVQ4T6WUy6tOYRSHn5+7MqDcy5ihqf/EVKYMlBkjmTgkt+OaS5H7LToII8pESuZyv5MMGLh9erT2afuccz7fsWq3a+/3fd61fuu33nQ6neXAQ2AxcDnJJ/4j0ul0PgJXgAvAGmBvkqPjZQp8CiwC9gEnC3wfWJfkTr/gBjgfmAwMApcKOt1sgYEkj/8VLPAZMA/4DgjZD5wDTgEzgTfAzpLiQy9wAzTDb7VY6G7gOHARmF3fHwEbkhwZCyrwOdAGun4asL2aJXgWkHquA5uAW0ms6o8YDejmqVX++crW8q3C78YKte62WQNc0Cq5faKbzfRaaToDmABoKzXeVc7YmuSdGwW+AEYDmqnd3wLcAM7Wc7hAC+t0XTAAHBT4cgQN21k2ULVUuyXlWSX4Wgun1HuoH+AQsBpYBpihkAZoFR58W+CrHhm6+EA1Rt2cJuG+7b6hfmq9oxdQ2CHgRAHnFGAPcLP86hBsbqZJ4OvWpDTamf5E4DTgZrNppmlSLVqpT5O4fzi6gYIMYVrDqThWLmg23a3mXE3yZSRjO6tzgR8tmBAvCk2tpYz3jp4dTtI0o5v324dvAbX5WabVa86yulnm52rKtiRP/iJ0fWgD/WUXm9tGn50BNiZ50As0LH4rQxvQXAhmsjaJ09FXmKF6aAG9tr6aMDiWTmOdIHAVcA9Y6m2dxNked/wC0vDHlJJxvu0AAAAASUVORK5CYII="/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                  <div class="feature__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="68" viewBox="0 0 67 68"><image width="67" height="68" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABECAYAAADaz4jLAAAETElEQVR4Xu2boVMrMRDGwwwVraCCCiqKKAJEK0CAKKYCBBX9WytAgGhFa4sAAQIECAwIKkDATN98mVkIN1fudjd3x+vkZjq8R3OXzS/fbnKbZWU+n89NuCyBlQDjWwkBhuMVAUaAER8kgzKCMoIyEjcQwU2Cm/xRN3l7ezPT6dRUKhWzs7NjfxZ1FeYmgHBzc2MeHx9/jH17e9tsbW2ZUqmUO5PcYXx8fJi7uztze3v7Ndhms2nwewKzurpqgeQNJTcYr6+v5uHhwX4+Pz8tiEaj8cM10Obq6sq8vLzY78vlsqnX62Zzc9NUq9XMlZIpjOfnZ/P09GQ/7+/vX4NZX1837XZ74QBxH1yIoODGtbU1C6VWq2UGRgQDMwhZw2j3QhzAB9/T7NP3klnGc+BSgBn3PARbKMaNL/id++HISQQDUr6/v0/sBwqAsT5kTgoDoNlslth3q9WyMYdziWDA7y8vL61PY6B0YYYweJoZjiHctovUCSVBRZ1Ox7oU5xLBgCGj0cjCOD4+5vSXedvBYGD76Pf77L5EMNALdXpyclLIniBupIhhk8nEBttut5sfjPF4bKO9RI5sK1PeQDAQqw4PD1Pe9d1MrIy/CAPx4vr62mATh6Wbey0VDOxNsLPFlh7vOdwrwHCIBRgBRrwDFa4MWqLJPMn+gO7972NGgOGodClgIFWHZMz+/r7NOUivpYCh9U+CF2Asm5twlRFVANet0qwyXJuiNoiXVm7HecDQxjExDErwIKm7t7eXONF5wNC+PIphcF+X84Bxfn5uE89HR0eiwygxDMp2SRMpWawmmiwX7BHDcLNdaYLbIj/ytbQiW392dmZwANXr9RLdNq6BCsbp6alNvmpSf75gcN3WOwxtwHLVpX1RoyxX2oDuHQZ3eY0zwJcyaFnd3d39cXzB8ReVm/iQpi8Y2pVEHUB9BVHO7MW1xZHmxcWF+hxHpQwYRnFDI08tDHJXTbzwogz3qLGo0zVa1bRnOGplgCj5q9YYiUJoMqQHR26fXmCQQdiN4iQrrxIkbLQwEdjraJNMXtwED4FRiB0oFdjY2DAHBweSSWbd4/bpQxXeYOBBiOjD4dDOkvR4j0OD9hU+1ejFTWgQtO/A/yXFImlhEAi8h8AtfdV7eYWBwVD8wL+1S10UDlwDVUNIRAME8iiaZHT0+d5hEBAYDZcBEJyIa4OqGyN8K4KgZAIDD0e+A0EVQODXmEWpnOF+cA0kblAthAAtfdZvrpgZDAKCQVBBGrdUAGrA7pKK6XwGyzgomcKgZTc6IMxsUo04lKUBmTYYe990penYlTraY/lFQUk0lkRryrUulsa2zGNGnBFR2bs14mgfrSnnuhVn4IW4SVyn9GcVbo04QC2qKdcOMu39mceM3wyJ1ogn1ZSnHZS0XaEwyGgswYgf3Ipe6aAX3fcnYPgelPR5AYZDLsAIMOIdKSgjKCMoI3GRCW7iIPoHyvnfYn1IYXcAAAAASUVORK5CYII="/></svg>
+                  </div>      
+                <div class="feature__text">
+                    <h4>Swiss Privacy</h4>
+                    <p>Data Security and Neutrality</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature__logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="74" viewBox="0 0 95 74"><image width="95" height="74" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAABKCAYAAADdV4jdAAAECklEQVR4Xu2coVN6QRDHjxkNGDRAwGDBAAEKQQMEDVIM/K0WgwQNECBAoECQAAGDBg0acIbffN/MMQ9+D7w77m4P3ZsxON7d3vvc993e7r4xtVgsFoIbCYEUwyfhHhll+HTsGT4he4bP8CkJENrmM5/hExIgNM3KZ/iEBAhNs/IZPiEBQtOsfIZPSIDQNCuf4RMSIDTNymf4hAQITbPyGT4hAULTe6X8+XwuXl9fxfv7e/SD39GOjo6WP6enp+Lw8JAQqbrpvYD/+fkphsOhmE6nSk+Wy+XE+fm5yGazSv2pOgUPH0rvdDri+/tbm1GhUBDFYlF7nK8BQcMH+Ha7vcLi+PhYnJycRMeMVDb6oc1mM/Hx8bHS/+zsTFQqFV88tewECx/n+cPDw1LxBwcHkYpxnGxr2Ijn52fx8vKy7HZxcSHgC0JrwcIfDAZiPB5HvNLptKjVapHaVVuv11v6CLwt19fXqkO99QsWPlT/9fUVgahWq9rOE2/O/f39EmSj0fAGVdVQsPDv7u52BmdjDlWQJv0Yvgk1S2MYviWQJtMwfBNqlsYwfEsgTaYJFr7Jw+zbGIZPuGPBwUeKABEqspYm+ZxNLDOZTBQhh5RsCwo+wHe7XadaNAnYXC2IBD6iz6Sce6vVEm9vbwIpYagUCTQbDSlppCuQ78EbgFRFCI0EPvIuSZlGGZHe3Nxo5XFUQOIYe3p6EkjQ3d7e/jcECTnfR5J3+DJNnJRrkfBd5WG2zY9cEpJvPqtg3uHLoyU0+NgY38UXr/Ank4no9/vRKx8ifKzr6urKmq/56Tj0Bn+9OBIqfJ8O2Rv8eHFkV+XDb2A+lAxRaLm8vFRS67YzP55+LpVKP1bMflK1yt+9wJc3jU0Lkm+BqsN9fHxcqdWqVqrW548Dj68NN6J6ve7c+XqBL52sLfhJ0FRuSKrwsU7EGnijXDbn8ONO1hZ8XAsROKVSKYH/24FgTKVGqwMfa3UdDTuFv+5kbcFf/6RE9YaiCx/+xOXd3yl8wI4Xwm3Bxzwm9dk/B18lWabrcH3B3+tjRyrdtsP1Af9XOFyAgnNsNpsbLw4mypcbqhMUqR47uGrirNf5SMvkVuT8zJeLwlfGo9FoucZQI1ws8FcFWXgg3HwQHMmv0EKFrxqwmSh9fYw35cNw3PmGCl/12rp38LHgkFPK+XxelMtlG1yV5vCqfKxI5nlCU/6fKKZgA5CRTFKYamJNSVYJnbbNjyPR9zf83pUvnW9SuY6yhmu6obuMI4G/acH89cIuW7njWJVUxI4mnGcqddYXlPLldZS/WNPZQu5rRCA45Rs9xZ4OYviEG8fwGT4hAULTrHyGT0iA0DQrn+ETEiA0zcpn+IQECE2z8hk+IQFC0/8AcjxSUCA70+IAAAAASUVORK5CYII="/></svg>
+                </div>
+                <div class="feature__text">
+                    <h4>Double Encryption</h4>
+                    <p>Automatic Email Security</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature__logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="60" viewBox="0 0 70 60"><image width="70" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA8CAYAAADbl8wjAAAEN0lEQVR4Xu2aLVMrMRSGwwwVRYAAAQIEFVSAANEKEFS0AtPfiiiiFSBAUFFEK6gAAQIEiFZQATO982bm3MlNk91NNrvNcpMZBsFuds+T93wuK/P5fM7CWiCwEsCoVRHAaLwlgAlgzAJpUExQTFCMGYGgGDNeIcYExfxSxUwmE4afr6+vvxaWSiW2tbXFNjY2zKxOcLXXrvT9/c0eHx/Z29sbm81mWnNWV1fZzs4Oq1arbG1tLYHZ8Zd4CwZAnp6e2M/PD7eiXC5zdYiGA5wIDYAqlQoHlHZ5BwbGDodD9vr6ym3b3NzkhgKKbsHFAFG8p16vM7ia7fIOzO3tLfv8/GQ4/ZOTE+4iSdfHxwe7v7/nKltfX2dnZ2fWcLwCA/cZj8ccCoyyCaoIzoAznU7Z9vY2g3JsljdgECv6/T634fT0NNJ14gyFa0F5UM7x8THb29uLu2Xh716AQVzpdrvckMPDQx5AdQuKoExFLoMYJLscgYb6Wq2WsUt5Aebl5YU9PDzwuNBoNCJPFwBVqfvg4GAhG1G8ioOteqAXYMiAONmLKqDATFBh3MXFxT/KoOuR2RCzTNbSwcA1er0ef2fZMNkQCs67u7s8Y9EisHJsgoteXV3xy9rttgkXtnQwSLF3d3e8Xok7VdQqo9FoIdtcX1/zLKQK2jpocZQKBUZUF+IG0jnAUopXBdn/AgxOmVQjn3itVlMWg4UHkyQjEQyoBIAQQ9A7Ib3risHCgoGxnU6H1zDNZtNZd0wQae+4wC4rcOkxBi+EEv79/d26StUFUlTANzc3vDNH/DFZXoBBN/38/Jyqt1EZTfvu7++zo6MjEy7LT9digRZX4JlYJmYwGxddqmKyggKAFHTlYjAp3FzBUOUqv5xLpWDvwWDAh1a2DST2yBUMnaIIRoSC9ItAjHhgM4uh+zHowjo/P7faJ3cw1BmrfB5GARxKe5ssgoYRSkHat5n+LS1dRzV0IhR5ekczYMx85WE40jGKPfymeW+a6Z8IJ1NXQnWKk8SCgVCD3CzGQSEViS+NKhl7yQtpGUOrNENw2jNTMKqYImaJpFAAAqU/1EGfU8gAuB2md2gLXH1TyjzGXF5e8vfHOIAWXh4/JlDkaT8A0T5J06/pdZkpJqocTwPF1EDb652CQVagb8sUU+QCqwhQnLsSuY54SuIguihQMgNDMQXuhMCYNqbYukOa+5y5EsUU1cCpSEpxnq6pP7GtU9J+a06jDtW9qRUj9ieqqpUKtKi/+QbFSYyhTxe/CYoTMJSJxE62iDHFeRNJYOQvfYg56JPEf+cQgfnoPk6bSB0YPATFHvUvRYLi1JWivg1HuZbrbOJqv9RZKUoxNG7QZSZXRmSxT6ZgiqgUZwWeqj+ST9DVVC0LZej2dKYY3QOKCMVJ8M3zFPN8VmrF5PmyeT4rgNHQDmACGDNHDIrR8PoDTVMciXINkmIAAAAASUVORK5CYII="/></svg>
+                </div>
+                <div class="feature__text">
+                    <h4>Anonymous Email</h4>
+                    <p>Protect Your Privacy</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="security">
+            <h1>Physical Security</h1>
+            <p>NeutronMail's infrastructure resides in Europe's <span>most secure</span> datacenter, underneath 1000 meters of solid rock.</p>
+            <button class="security-button">Learn more about our security features</button>
+        </section>
+
+        <section class="testimonials">
+
+            <div class="news">
+
+                <div class="news__block">
+                
+                </div>
+
+                <div class="news__block">
+                    
+                </div>
+
+                <div class="news__block">
+                    
+                </div>
+
+                <div class="news__block">
+                    
+                </div>
+
+                <div class="news__block">
+                    
+                </div>
+
+            </div>
+
+            <div class="slider">
+
+                <div class="slider-count">
+                    <div class="slider-count__circle"></div>
+                    <div class="slider-count__circle"></div>
+                    <div class="slider-count__circle"></div>
+                </div>
+
+                <div class="slider-window">
+                        <div class="slider-block__wrap">
+
+                            <div class="slider-block">
+                                <div class="slider-block__text">
+                                    <p> 1 A new email service being developed by a group from MIT and CERN promises to bring secure,
+                                    encrypted email to the masses and keep sensitive information away from prying eyes
+                                </p>
+                                </div> 
+                                <div class="slider-block__author">
+                                    <p>— Boston Herald</p>
+                                </div>
+                            </div>
+            
+                            <div class="slider-block">
+                                <div class="slider-block__text">
+                                    <p> 2 A new email service being developed by a group from MIT and CERN promises to bring secure,
+                                    encrypted email to the masses and keep sensitive information away from prying eyes
+                                </p>
+                                </div>                   
+                                <div class="slider-block__author">
+                                    <p>— Boston Herald</p>
+                                </div>
+                            </div>
+            
+                            <div class="slider-block">
+                                <div class="slider-block__text">
+                                    <p> 3 A new email service being developed by a group from MIT and CERN promises to bring secure,
+                                    encrypted email to the masses and keep sensitive information away from prying eyes
+                                    </p>
+                                </div>                        
+                                <div class="slider-block__author">
+                                    <p>— Boston Herald</p>
+                                </div>
+                            </div>
+            
+                        </div>
+                </div>
+                
+        </div>
+
+        <div class="download">
+            <div class="download-text">
+                <h3>Any device, anywhere</h3>
+                <p>The NeutronMail inbox is optimized for productivity. Each detail within our secure email service is optimized to help you better read, organize, and send email.</p>
+            </div>
+            <div class="download-links">
+                <div class="ios-button__wrap">
+                    <button class="ios-button"> <img src="../template/img/ios-bg.png" alt=""></button>
+                </div>
+                
+                <div class="android-button__wrap">
+                    <button class="android-button"> <img src="../template/img/google-bg.png" alt=""> </button>
+                </div>
+                
+            </div>
+        </div>
+
+        </section>
 
     </main>
     <script src="./main.js"></script>
