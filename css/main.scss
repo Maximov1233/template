@@ -19,15 +19,64 @@ body {
     font-family: 'Titillium Web', sans-serif;
     height: 1000rem;
     .header {
-        text-align: center;
         display: flex;
         justify-content: space-around;
-        margin-top: 5rem;
+        align-items: center;
+        padding-top: 5rem;
         margin-bottom: 10rem;
+        min-height: 12rem;
+        .authorization {
+            display: none;
+            .login-wrap {
+                color: #000;
+                ::before {
+                    content: '';
+                    background-image: url(../img/login.svg);
+                    background-size: 50px 50px;
+                    background: #000;
+                }
+                .login-button {
+                    font-weight: 700;
+                    border: none;
+                    color: #454545;
+                    font-size: 2rem;
+                    width: 9.4rem;
+                    height: 4rem;
+                    text-align: center;
+                    margin-right: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    border-radius: 2rem;
+                    background-color: transparent;
+                    svg {
+                        margin-right: 0.8rem;
+                        width: 17px;
+                        height: 17px;
+                        fill: #582c7e;
+                    }
+                }
+            }
+            .signup-button {
+                font-weight: 700;
+                border: none;
+                color: #fff;
+                font-size: 1.6rem;
+                width: 9.4rem;
+                height: 4rem;
+                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(142, 117, 222, 0.15);
+                border-radius: 2rem;
+                background-color: #582c7e;
+                text-align: center;
+            }
+        }
+        
         .logo_language {
+            flex-basis: 40%;
             text-align: left;
             position: relative;
-            width: 30rem;
+            min-width: 20rem;
             .logo-text {
                 h2 {
                 font-weight: 700;
@@ -54,7 +103,6 @@ body {
 
         }
         .navbar {
-            width: 100px;
             text-align: left;
             position: relative;
             .nav-link {
@@ -62,80 +110,22 @@ body {
                 color: #454545;
                 margin-right: 2rem;
             }
-        }
-        .authorization {
-            display: flex;
-            .login-wrap {
-                ::before {
-                    content: '';
-                    background-image: url(../img/login.svg);
-                    background-size: 50px 50px;
-                    background: #000;
-                }
-                color: #000;
-                .login-button {
-                    font-weight: 700;
-                    border: none;
-                    background: transparent;
-                    color: #454545;
-                    font-size: 2rem;
-                    width: 94px;
-                    height: 40px;
-                    text-align: center;
-                    margin-right: 1rem;
-                    display: flex;
-                    align-items: center;
-                    svg {
-                        margin-right: 0.8rem;
-                        width: 17px;
-                        height: 17px;
-                        fill: #582c7e;
-                    }
-                }
+            .authorization {
+                display: flex;
             }
-            .signup-button {
-                font-weight: 700;
-                border: none;
-                color: #fff;
-                font-size: 1.6rem;
-                width: 94px;
-                height: 40px;
-                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(142, 117, 222, 0.15);
-                border-radius: 20px;
-                background-color: #582c7e;
-                text-align: center;
-            }
+
         }
-        
     }
     .main {
-        .ios-button {
-            border: none;
-            width: 46px;
-            height: 46px;
-            background-color: #5f2966;
-            opacity: 0.9;
-            border-radius: 50%;
-            margin-right: 2rem;
-            svg {
-                width: 2.4rem;
-                height: 2.4rem;
-                fill: #fff;
-            }
+        .line {
+            width: 100%;
+            height: 1px;
+            z-index: 99;
+            background: #000;
+            margin-top: -10px;
         }
-        .android-button {
-            border-radius: 50%;
-            border: none;
-            width: 46px;
-            height: 46px;
-            background-color: #4a1c50;
-            opacity: 0.79;
-            text-align: center;
-            svg {
-                width: 20px;
-                height: 22px;
-            }
-        }
+        
+        
         .welcome {
             text-align: center;
             margin-bottom: 10rem;
@@ -152,11 +142,38 @@ body {
                     color: #fc2028;
                 }
             }
-            .download {
+            .create {
                 margin-top: 8rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                &-ios__button {
+                        border: none;
+                        width: 46px;
+                        height: 46px;
+                        background-color: #5f2966;
+                        opacity: 0.9;
+                        border-radius: 50%;
+                        margin-right: 2rem;
+                        svg {
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            fill: #fff;
+                        }
+                }
+                &-android__button {
+                        border-radius: 50%;
+                        border: none;
+                        width: 46px;
+                        height: 46px;
+                        background-color: #4a1c50;
+                        opacity: 0.79;
+                        text-align: center;
+                        svg {
+                            width: 20px;
+                            height: 22px;
+                        }
+                }
                 &-button {
                     color: #fff;
                     font-size: 1.8rem;
@@ -170,8 +187,6 @@ body {
                     background-color: #5f2966;
                     margin-right: 2rem;
                 }
-                
-                
             }  
         }
         .features {
@@ -293,17 +308,92 @@ body {
                     }
                 }
                 &-links {
-                    max-width: 68%;
+                    max-width: 52%;
                     display: flex;
-                    justify-content: center;
-                    button {
-                        margin-right: 20rem;
-                        span {
-                            font-weight: 700;
-                        }
+                    justify-content: flex-end;
+                    .android-button {
+                        margin-left: 1.3rem;
                     }
                 }
             }
         }
     }
+}
+
+@media (max-width: 1444px) {
+    body {
+        .header {
+            .logo_language {
+                flex-basis: 30%;
+            }
+        }
+        
+    } 
+}
+
+@media (max-width: 1174px) {
+    body {
+        .header {
+            .logo_language {
+                flex-basis: 20%;
+            }
+        }
+        
+    } 
+}
+
+@media (max-width: 1040px) {
+    body {
+        .header {
+            .logo_language {
+                flex-basis: 0;
+            }
+        }
+        
+    } 
+}
+
+@media (max-width: 949px) {
+    body {
+        .header {
+            display: block;
+            padding-top: 1rem;
+            width: 100%;
+            .authorization {
+                display: flex;
+                position: absolute;
+                top: 3.5rem;
+                right: 3rem;
+            }
+            .logo_language {
+                
+                width: 100%;
+                text-align: center;
+                .logo-text {
+                    h2 {
+                        font-size: 7rem;
+                    }
+                }
+                .language_choose {
+                    position: inherit;
+                    top: 0;
+                    font-size: 2rem; 
+                }
+            }
+            .navbar {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                nav {
+                    .nav-link{
+                        font-size: 2.7rem;
+                    }
+                }
+                .authorization {
+                    display: none;
+                }
+            } 
+        }
+    } 
 }
